@@ -7,7 +7,7 @@ FROM python:3.12@sha256:63828510c8b5ccce3bf0d6fabd6f3d17d4effa1ffe690f80a67c8e2d
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# set work directory to app.   
+# Set working directory to app.   
 WORKDIR /app
 
 # Update package lists, install compilers and cleanup cache.
@@ -41,7 +41,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Create user and group: appuser
 RUN useradd --system --user-group --shell /usr/sbin/nologin appuser
 
-# Set work directory to app
+# Set working directory to app
 WORKDIR /app
 
 # Copy compiled package from build stage to virtual environment in deploy stage
